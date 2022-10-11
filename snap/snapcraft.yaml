@@ -58,7 +58,13 @@ apps:
       - network-bind
 
 parts:
+  scons-deps:
+    plugin: python
+    python-version: python3
+    python-packages:
+      - scons
   endlesssky:
+    after: [scons-deps]
     plugin: scons
     source: "https://github.com/endless-sky/endless-sky.git"
     source-depth: 1
