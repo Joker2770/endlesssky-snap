@@ -68,8 +68,6 @@ parts:
       - gcc
       - g++
       - scons
-      - python3
-      - python3-pip
       - libsdl2-dev
       - libpng-dev
       - libjpeg-dev
@@ -88,6 +86,5 @@ parts:
       - libmad0
       - uuid
     override-build: |
-      sudo pip3 install scons
       scons
       sudo scons install
