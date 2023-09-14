@@ -29,7 +29,7 @@ description: |
 
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
-base: core18
+base: core22
 
 layout:
   /usr/local/share/games/endless-sky:
@@ -59,7 +59,10 @@ apps:
 
 parts:
   endlesssky:
-    plugin: scons
+    plugin: cmake
+    cmake-parameters:
+      - "-DCMAKE_INSTALL_PREFIX=/usr/local"
+      - "-DCMAKE_BUILD_TYPE=Release"
     source: "https://github.com/endless-sky/endless-sky.git"
     source-depth: 1
     source-branch: master
@@ -67,7 +70,7 @@ parts:
     build-packages:
       - gcc
       - g++
-      - scons
+      - make
       - libsdl2-dev
       - libpng-dev
       - libjpeg-dev
@@ -85,6 +88,3 @@ parts:
       - libopenal1
       - libmad0
       - uuid
-    override-build: |
-      scons
-      sudo scons install
