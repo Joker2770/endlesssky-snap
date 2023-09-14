@@ -97,13 +97,12 @@ parts:
       - libglew-dev
       - libopenal-dev
       - libmad0-dev
-      - uuid-dev
     stage-packages:
       - libsdl2-2.0-0
       - libpng16-16
-      - libjpeg9
+      - libjpeg8
       - libgl1
       - libglew2.2
       - libopenal1
+      - libopengl0
       - libmad0
-      - uuid
