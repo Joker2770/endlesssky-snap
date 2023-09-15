@@ -72,7 +72,7 @@ apps:
       - network
       - network-bind
   endlesssky:
-    command: "usr/local/games/endless-sky -r usr/local/share/games/endless-sky/"
+    command: "usr/local/games/endless-sky -r $SNAP/usr/local/share/games/endless-sky/"
     command-chain: ["bin/desktop-launch"]
     environment:
       LIBGL_DRIVERS_PATH: "$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/dri"
