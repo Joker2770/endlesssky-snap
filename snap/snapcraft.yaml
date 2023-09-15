@@ -36,10 +36,12 @@ layout:
     bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib
   /usr/share/alsa:
     bind: $SNAP/usr/share/alsa
-  /usr/local/share/games/endless-sky:
-    bind: $SNAP/usr/local/share/games/endless-sky
+  /usr/local/share/games:
+    bind: $SNAP/usr/local/share/games
   /usr/local/share/icons:
     bind: $SNAP/usr/local/share/icons
+  /usr/local/share/doc:
+    bind: $SNAP/usr/local/share/doc
   /usr/local/share/man:
     bind: $SNAP/usr/local/share/man
   /usr/local/share/metainfo:
