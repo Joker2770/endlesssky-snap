@@ -35,6 +35,22 @@ grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
 base: core22
 
+plugs:
+  # Support for common GTK themes
+  # https://forum.snapcraft.io/t/how-to-use-the-system-gtk-theme-via-the-gtk-common-themes-snap/6235
+  gtk-3-themes:
+    interface: content
+    target: $SNAP/data-dir/themes
+    default-provider: gtk-common-themes
+  icon-themes:
+    interface: content
+    target: $SNAP/data-dir/icons
+    default-provider: gtk-common-themes
+  sound-themes:
+    interface: content
+    target: $SNAP/data-dir/sounds
+    default-provider: gtk-common-themes
+
 layout:
   /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib:
     bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib
@@ -50,6 +66,10 @@ layout:
     bind: $SNAP/usr/local/share/man
   /usr/local/share/metainfo:
     bind: $SNAP/usr/local/share/metainfo
+  /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/dri:
+    bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/dri
+  /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/gtk-2.0/modules:
+    bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/gtk-2.0/modules
 
 apps:
   endlesssky-pure:
@@ -69,6 +89,12 @@ apps:
       - alsa
       - audio-playback
       - removable-media
+      - gsettings
+      - process-control
+      - hardware-observe
+      - mount-observe
+      - system-observe
+      - system-trace
       - network
       - network-bind
   endlesssky:
@@ -88,6 +114,12 @@ apps:
       - alsa
       - audio-playback
       - removable-media
+      - gsettings
+      - process-control
+      - hardware-observe
+      - mount-observe
+      - system-observe
+      - system-trace
       - network
       - network-bind
 
