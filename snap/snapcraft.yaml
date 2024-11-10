@@ -149,6 +149,7 @@ parts:
       - gcc
       - g++
       - make
+      - catch2
       - libsdl2-dev
       - libpng-dev
       - libjpeg-dev
