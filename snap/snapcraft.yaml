@@ -1,5 +1,5 @@
 #    snapcraft yaml for endless-sky.
-#    Copyright (C) 2021-2023 joker2770
+#    Copyright (C) 2021-2024 joker2770
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -16,7 +16,7 @@
 
 # After registering a name on build.snapcraft.io, commit an uncommented line:
 name: endlesssky
-version: '0.10.6' # just for humans, typically '1.2+git' or '1.3.2'
+version: '0.10.10' # just for humans, typically '1.2+git' or '1.3.2'
 summary: Endless Sky is a sandbox-style space exploration game. # 79 char long summary
 description: |
   Endless Sky starts off the player with a decision to pick their own ship
