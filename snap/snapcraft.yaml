@@ -141,6 +141,8 @@ parts:
       - "-DES_USE_VCPKG=OFF"
       - "-DCMAKE_INSTALL_PREFIX=/usr/local"
       - "-DCMAKE_BUILD_TYPE=Release"
+      - "-DENABLE_TESTING=OFF"
+      - "-DBUILD_TESTING=OFF"
     source: "https://github.com/endless-sky/endless-sky.git"
     source-depth: 1
     source-branch: master
