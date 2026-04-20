@@ -69,8 +69,8 @@ layout:
     symlink: $SNAP/gpu-2404/drirc.d
   /usr/share/X11/XErrorDB:
     symlink: $SNAP/gpu-2404/X11/XErrorDB
-  /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib:
-    bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib
+  /usr/lib/$CRAFT_ARCH_TRIPLET/alsa-lib:
+    bind: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/alsa-lib
   /usr/share/alsa:
     bind: $SNAP/usr/share/alsa
   /usr/local/share/games:
@@ -83,19 +83,19 @@ layout:
     bind: $SNAP/usr/local/share/man
   /usr/local/share/metainfo:
     bind: $SNAP/usr/local/share/metainfo
-  /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/dri:
-    bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/dri
-  /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/gtk-2.0/modules:
-    bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/gtk-2.0/modules
+  /usr/lib/$CRAFT_ARCH_TRIPLET/dri:
+    bind: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/dri
+  /usr/lib/$CRAFT_ARCH_TRIPLET/gtk-2.0/modules:
+    bind: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gtk-2.0/modules
 
 apps:
   endlesssky-pure:
     command: usr/local/games/endless-sky
     common-id: io.github.endless_sky.endless_pure
     environment:
-      LIBGL_DRIVERS_PATH: "$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/dri"
+      LIBGL_DRIVERS_PATH: "$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/dri"
       # pulseaudio
-      LD_LIBRARY_PATH: "$LD_LIBRARY_PATH:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/blas:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/lapack:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio"
+      LD_LIBRARY_PATH: "$LD_LIBRARY_PATH:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/blas:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/lapack:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/pulseaudio"
       SNAP_DESKTOP_RUNTIME: $SNAP/gnome-platform
       GTK_USE_PORTAL: '1'
     extensions: [gnome]
@@ -122,9 +122,9 @@ apps:
     command: "usr/local/games/endless-sky -r $SNAP/usr/local/share/games/endless-sky/"
     common-id: io.github.endless_sky.endless_sky
     environment:
-      LIBGL_DRIVERS_PATH: "$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/dri"
+      LIBGL_DRIVERS_PATH: "$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/dri"
       # pulseaudio
-      LD_LIBRARY_PATH: "$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/blas:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/lapack:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio"
+      LD_LIBRARY_PATH: "$LD_LIBRARY_PATH:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/blas:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/lapack:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/pulseaudio"
       SNAP_DESKTOP_RUNTIME: $SNAP/gnome-platform
       GTK_USE_PORTAL: '1'
     extensions: [gnome]
