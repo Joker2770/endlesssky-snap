@@ -150,6 +150,7 @@ parts:
       - make
       - catch2
       - libavif-dev
+      - libflac++-dev
       - libsdl2-dev
       - libpng-dev
       - libjpeg-dev
@@ -158,8 +159,10 @@ parts:
       - libopenal-dev
       - libmad0-dev
       - libminizip-dev
+      - uuid-dev
     stage-packages:
       - libavif13
+      - libflac++6v5
       - libsdl2-2.0-0
       - libpng16-16
       - libjpeg8
